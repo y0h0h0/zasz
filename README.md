@@ -12,8 +12,9 @@ ReactDOM.render(<Provider><App /></Provider>, document.getElementById('root'));
 ```javascript
 import store from 'zasz';
 
-store.user = {name:'Tom', age:18}
+store.count = 0
 
-<div>Name: {store.user.name}</div>
-<div>Age: {store.user.age}</div>
+<div>Counter: {store.count}</div>
+<div onClick={()=>{ store.count+=1 }}>plus one</div>
+
 ```
