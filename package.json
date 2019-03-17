@@ -1,11 +1,9 @@
 {
   "name": "zasz",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A react store",
   "main": "zasz.js",
-  "scripts": {
-    "start":"node zasz.js"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/y0h0h0/zasz.git"
