@@ -1,11 +1,11 @@
 ![Search](./zasz.jpg)
 ***
 ### A react store manager
-Probably the simpliest react store in the world.__
+Probably the simpliest react store in the world.<br/>
 Installation: `npm i zasz -S`
 ***
 
-`index.js`
+`index.js`<br/>
 In the main file you should wrap your app's main element with the zasz Provider.
 ```javascript
 import React from 'react';
@@ -16,8 +16,8 @@ import { Provider } from 'zasz';
 ReactDOM.render(<Provider><App /></Provider>, document.getElementById('root'));
 ```
 
-
-`App.js`
+***
+`App.js`<br/>
 Anywhere else in your app you can import the zasz store. Zasz will share data through the app. Once you change a value in store it will be applied everywhere.
 ```javascript
 import React from 'react';
