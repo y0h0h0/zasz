@@ -1,0 +1,23 @@
+{
+  "name": "zasz",
+  "version": "0.0.1",
+  "description": "A react store",
+  "main": "zasz.js",
+  "scripts": {
+    "start":"node zasz.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y0h0h0/zasz.git"
+  },
+  "keywords": [
+    "react",
+    "store"
+  ],
+  "author": "tomteaser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/y0h0h0/zasz/issues"
+  },
+  "homepage": "https://github.com/y0h0h0/zasz#readme"
+}
