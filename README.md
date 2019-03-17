@@ -3,18 +3,26 @@
 ### A react store manager
 ***
 
+`index.js`
 ```javascript
-import {Provider} from 'zasz';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { Provider } from 'zasz';
 
 ReactDOM.render(<Provider><App /></Provider>, document.getElementById('root'));
 ```
 
+`App.js`
 ```javascript
+import React from 'react';
 import store from 'zasz';
 
-store.count = 0
+store.counter = 0;
 
-<div>Counter: {store.count}</div>
-<div onClick={()=>{ store.count+=1 }}>plus one</div>
-
+export default (props) =>
+    <div>
+      <div>Counter {store.counter}</div>
+      <div onClick={()=>{ store.counter+=1 }}>Plus one</div>
+    </div>
 ```

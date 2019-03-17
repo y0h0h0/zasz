@@ -17,6 +17,9 @@ export default (() => {
 })()
 
 export class Provider extends Component {
-  componentWillMount = () => update = () => this.setState({})
-  render = () => React.cloneElement(this.props.children)
+  componentWillMount() {update = () => this.setState({})}
+  render() {
+    const a = React.Children.map(this.props.children, c => {return React.cloneElement(c)});
+    return (a[0]);
+  }
 }
