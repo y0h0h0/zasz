@@ -1,7 +1,7 @@
 ![Search](./zasz.jpg)
 ***
 ### A react store manager
-Probably the simpliest react store in the world.
+Probably the simpliest react store in the world.\n
 Installation: `npm i zasz -S`
 ***
 
