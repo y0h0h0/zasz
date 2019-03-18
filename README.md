@@ -1,7 +1,7 @@
 ![Search](./zasz.jpg)
 ***
 ### A react store manager
-Probably the simpliest react store in the world.<br/>
+Probably the simpliest react store in the world. *Note: zasz does not work with PureComponents*<br/>
 Installation: `npm i zasz -S`
 ***
 
