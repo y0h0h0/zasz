@@ -1,6 +1,6 @@
 {
   "name": "zasz",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "A react store",
   "main": "zasz.js",
   "scripts": {},
@@ -10,7 +10,8 @@
   },
   "keywords": [
     "react",
-    "store"
+    "store",
+    "ssr"
   ],
   "author": "tomteaser",
   "license": "MIT",

@@ -1,9 +1,10 @@
 ![Search](./zasz.jpg)
 ***
-### A react store manager
-Probably the simpliest react store in the world. *Note: zasz does not work with PureComponents*<br/>
-Installation: `npm i zasz -S`
+# A react store manager
+Probably the simplest react store in the world.<br/>
+Installation: `npm i zasz`
 ***
+## Client Side Rendering
 
 `index.js`<br/>
 In the main file you should wrap your app's main element with the zasz Provider.
@@ -31,6 +32,49 @@ export default (props) =>
       <div onClick={()=>{ store.counter+=1 }}>Plus one</div>
     </div>
 ```
+
+
+
+***
+## Server Side Rendering with Next.js
+***
+First off, you should follow the instructions: https://nextjs.org/docs#custom-app<br/>
+Then change the `_app.js` file:
+
+```javascript
+import React from 'react';
+import App from 'next/app';
+import { Provider } from 'zasz';
+
+class MyApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
+    return { pageProps };
+  }
+
+  render() {
+    const { Component, pageProps } = this.props;
+
+    return (
+      <Provider>
+          <Component {...pageProps} />
+      </Provider>
+    );
+  }
+}
+
+export default MyApp;
+
+```
+
+***
+
+*Note: zasz does not work with PureComponents*
 
 ***
 
