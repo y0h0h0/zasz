@@ -15,9 +15,9 @@ const magic = () => {
   }
   return new Proxy(store, prxfy)
 }
-export default magic();
+module.exports = magic();
 
-export class Provider extends React.Component {
+module.exports.Provider = class Provider extends React.Component {
   constructor() {super();update = () => this.setState({})}
   render() {
     const a = React.Children.map(this.props.children, c => {return React.cloneElement(c)});
