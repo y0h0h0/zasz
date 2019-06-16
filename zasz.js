@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+const React = require('react');
 
 let store = {}, update = null;
 
@@ -17,7 +17,7 @@ const magic = () => {
 }
 export default magic();
 
-export class Provider extends Component {
+export class Provider extends React.Component {
   constructor() {super();update = () => this.setState({})}
   render() {
     const a = React.Children.map(this.props.children, c => {return React.cloneElement(c)});
