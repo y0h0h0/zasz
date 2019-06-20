@@ -18,7 +18,11 @@ const magic = () => {
 module.exports = magic();
 
 module.exports.Provider = class Provider extends React.Component {
-  constructor() {super();update = () => this.setState({})}
+  constructor(props) {
+    super(props);
+    const ths = props.ctx ? props.ctx : this;
+    update = () => ths.setState({})
+  }
   render() {
     const a = React.Children.map(this.props.children, c => {return React.cloneElement(c)});
     return (a[0]);
